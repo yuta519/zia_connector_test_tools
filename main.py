@@ -8,9 +8,7 @@ def main():
     # parser = argparse.ArgumentParser()
     # parser.add_argument("file", help="Please set a file for testing scenario", type=str)
     # args = parser.parse_args()
-
     prepare
-
     get_access_with_chrome()
 
 
