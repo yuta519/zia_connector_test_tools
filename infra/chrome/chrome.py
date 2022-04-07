@@ -29,8 +29,8 @@ def get(driver: WebDriver, url: str) -> None:
     driver.get(url)
 
 
-def take_screenshot(driver: WebDriver) -> None:
-    driver.save_screenshot("logs/screenshot/screen.png")
+def take_screenshot(driver: WebDriver, screenshot_filename: str = "hoge") -> None:
+    driver.save_screenshot(f"logs/screenshot/{screenshot_filename}")
 
 
 def fetch_pagesource(driver: WebDriver) -> str:
