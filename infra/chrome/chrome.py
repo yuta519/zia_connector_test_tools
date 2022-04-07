@@ -1,7 +1,7 @@
 import platform
-import time
 
 from selenium import webdriver
+from selenium.webdriver.remote.webdriver import WebDriver
 
 
 def _decide_chromedriver_by_os():
@@ -17,19 +17,25 @@ def _decide_chromedriver_by_os():
 chrome_driver_path = _decide_chromedriver_by_os()
 
 
-def initialize_driver() -> webdriver:
+def initialize_driver() -> WebDriver:
     return webdriver.Chrome(executable_path=chrome_driver_path)
 
 
-def destroy_driver(driver: webdriver) -> None:
+def destroy_driver(driver: WebDriver) -> None:
     driver.close()
 
 
-def get(driver: webdriver, url: str) -> None:
+def get(driver: WebDriver, url: str) -> None:
     driver.get(url)
-    # driver.save_screenshot("logs/screenshot/screen.png")
-    time.sleep(1)
 
 
-def take_screenshot(driver: webdriver) -> None:
+def take_screenshot(driver: WebDriver) -> None:
     driver.save_screenshot("logs/screenshot/screen.png")
+
+
+def fetch_pagesource(driver: WebDriver) -> str:
+    return driver.page_source
+
+
+def fetch_page_title(driver: WebDriver) -> str:
+    return driver.title

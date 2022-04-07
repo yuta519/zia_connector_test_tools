@@ -127,3 +127,5 @@ URLCATEGORY_URLS = {
     "CRYPTOMINING": [],
     "ADSPYWARE_SITES": [],
 }
+
+BLOCK_TITLE = "Internet Security by Zscaler"
