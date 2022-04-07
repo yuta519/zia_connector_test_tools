@@ -4,4 +4,6 @@ install:
 	poetry install
 
 run:
+	poetry shell
 	python main.py
+	exit
