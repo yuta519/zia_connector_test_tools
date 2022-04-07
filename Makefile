@@ -1,4 +1,4 @@
-.PHONY install run
+.PHONY: install run
 
 install:
 	poetry install

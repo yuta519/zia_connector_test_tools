@@ -10,7 +10,6 @@ def access_allow_url(urlcategory: str):
     for url in URLCATEGORY_URLS[urlcategory]:
         try:
             url = urlparse(f"https://{url}")
-            print(f'{url.netloc.replace(".", "_")}.png')
             driver = chrome.initialize_driver()
             chrome.get(driver, f"{url.scheme}://{url.netloc}")
             chrome.take_screenshot(driver, f'{url.netloc.replace(".", "_")}.png')
