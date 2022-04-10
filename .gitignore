@@ -1,6 +1,8 @@
 .venv
 .vscode
+.DS_Store
 poetry.lock
 __pycache__
 
 logs/*
+
